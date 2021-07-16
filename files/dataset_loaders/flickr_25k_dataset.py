@@ -3,15 +3,15 @@
 
 import os
 
-from tensorlayer import logging
-from tensorlayer import visualize
+from my_tensorlayer import logging
+from my_tensorlayer import visualize
 
-from tensorlayer.files.utils import del_file
-from tensorlayer.files.utils import folder_exists
-from tensorlayer.files.utils import load_file_list
-from tensorlayer.files.utils import maybe_download_and_extract
-from tensorlayer.files.utils import natural_keys
-from tensorlayer.files.utils import read_file
+from my_tensorlayer.files.utils import del_file
+from my_tensorlayer.files.utils import folder_exists
+from my_tensorlayer.files.utils import load_file_list
+from my_tensorlayer.files.utils import maybe_download_and_extract
+from my_tensorlayer.files.utils import natural_keys
+from my_tensorlayer.files.utils import read_file
 
 __all__ = ['load_flickr25k_dataset']
 

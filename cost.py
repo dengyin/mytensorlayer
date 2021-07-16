@@ -7,7 +7,7 @@ import tensorflow as tf
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import standard_ops
 
-import tensorlayer as tl
+import my_tensorlayer as tl
 
 __all__ = [
     'cross_entropy',
@@ -376,7 +376,7 @@ def iou_coe(output, target, threshold=0.5, axis=(1, 2, 3), smooth=1e-5):
 
 def cross_entropy_seq(logits, target_seqs, batch_size=None):  # , batch_size=1, num_steps=None):
     """Returns the expression of cross-entropy of two sequences, implement
-    softmax internally. Normally be used for fixed length RNN outputs, see `PTB example <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_ptb_lstm_state_is_tuple.py>`__.
+    softmax internally. Normally be used for fixed length RNN outputs, see `PTB example <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_ptb_lstm_state_is_tuple.py>`__.
 
     Parameters
     ----------
@@ -391,7 +391,7 @@ def cross_entropy_seq(logits, target_seqs, batch_size=None):  # , batch_size=1, 
 
     Examples
     --------
-    >>> see `PTB example <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_ptb_lstm_state_is_tuple.py>`__.for more details
+    >>> see `PTB example <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_ptb_lstm_state_is_tuple.py>`__.for more details
     >>> input_data = tf.placeholder(tf.int32, [batch_size, n_steps])
     >>> targets = tf.placeholder(tf.int32, [batch_size, n_steps])
     >>> # build the network

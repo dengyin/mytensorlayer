@@ -3,7 +3,7 @@
 
 from __future__ import absolute_import
 
-import tensorlayer as tl
+import my_tensorlayer as tl
 
 import hyperdash as hd
 

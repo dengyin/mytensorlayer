@@ -1,5 +1,5 @@
-from tensorlayer.layers import *
-from tensorlayer.third_party.roi_pooling.roi_pooling.roi_pooling_ops import roi_pooling
+from my_tensorlayer.layers import *
+from my_tensorlayer.third_party.roi_pooling.roi_pooling.roi_pooling_ops import roi_pooling
 
 # from roi_pooling.roi_pooling_ops import roi_pooling
 

@@ -6,18 +6,18 @@ import os
 
 import tensorflow as tf
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.layers import Layer
-from tensorlayer.layers import BatchNormLayer
-from tensorlayer.layers import Conv2d
-from tensorlayer.layers import DepthwiseConv2d
-from tensorlayer.layers import FlattenLayer
-from tensorlayer.layers import GlobalMeanPool2d
-from tensorlayer.layers import InputLayer
-from tensorlayer.layers import ReshapeLayer
+from my_tensorlayer.layers import Layer
+from my_tensorlayer.layers import BatchNormLayer
+from my_tensorlayer.layers import Conv2d
+from my_tensorlayer.layers import DepthwiseConv2d
+from my_tensorlayer.layers import FlattenLayer
+from my_tensorlayer.layers import GlobalMeanPool2d
+from my_tensorlayer.layers import InputLayer
+from my_tensorlayer.layers import ReshapeLayer
 
-from tensorlayer.files import maybe_download_and_extract, assign_params, load_npz
+from my_tensorlayer.files import maybe_download_and_extract, assign_params, load_npz
 
 __all__ = [
     'MobileNetV1',
@@ -40,7 +40,7 @@ class MobileNetV1(Layer):
 
     Examples
     ---------
-    Classify ImageNet classes, see `tutorial_models_mobilenetv1.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_models_mobilenetv1.py>`__
+    Classify ImageNet classes, see `tutorial_models_mobilenetv1.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_models_mobilenetv1.py>`__
 
     >>> x = tf.placeholder(tf.float32, [None, 224, 224, 3])
     >>> # get the whole model
@@ -179,7 +179,7 @@ class MobileNetV1(Layer):
     def restore_params(self, sess, path='models'):
         logging.info("Restore pre-trained parameters")
         maybe_download_and_extract(
-            'mobilenet.npz', path, 'https://github.com/tensorlayer/pretrained-models/raw/master/models/',
+            'mobilenet.npz', path, 'https://github.com/my_tensorlayer/pretrained-models/raw/master/models/',
             expected_bytes=25600116
         )  # ls -al
         params = load_npz(name=os.path.join(path, 'mobilenet.npz'))

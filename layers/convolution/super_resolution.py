@@ -3,12 +3,12 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import Layer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
-from tensorlayer.decorators import private_method
+from my_tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import private_method
 
 __all__ = [
     'SubpixelConv1d',
@@ -18,7 +18,7 @@ __all__ = [
 
 class SubpixelConv2d(Layer):
     """It is a 2D sub-pixel up-sampling layer, usually be used
-    for Super-Resolution applications, see `SRGAN <https://github.com/tensorlayer/srgan/>`__ for example.
+    for Super-Resolution applications, see `SRGAN <https://github.com/my_tensorlayer/srgan/>`__ for example.
 
     Parameters
     ------------
@@ -40,7 +40,7 @@ class SubpixelConv2d(Layer):
     >>> # examples here just want to tell you how to set the n_out_channel.
     >>> import numpy as np
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = np.random.rand(2, 16, 16, 4)
     >>> X = tf.placeholder("float32", shape=(2, 16, 16, 4), name="X")
     >>> net = tl.layers.InputLayer(X, name='input')
@@ -138,7 +138,7 @@ class SubpixelConv1d(Layer):
     Examples
     ----------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> t_signal = tf.placeholder('float32', [10, 100, 4], name='x')
     >>> n = tl.layers.InputLayer(t_signal, name='in')
     >>> n = tl.layers.SubpixelConv1d(n, scale=2, name='s')

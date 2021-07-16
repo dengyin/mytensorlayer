@@ -29,16 +29,16 @@ import os
 import numpy as np
 import tensorflow as tf
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.layers import Conv2d
-from tensorlayer.layers import DenseLayer
-from tensorlayer.layers import FlattenLayer
-from tensorlayer.layers import InputLayer
-from tensorlayer.layers import MaxPool2d
+from my_tensorlayer.layers import Conv2d
+from my_tensorlayer.layers import DenseLayer
+from my_tensorlayer.layers import FlattenLayer
+from my_tensorlayer.layers import InputLayer
+from my_tensorlayer.layers import MaxPool2d
 
-from tensorlayer.files import maybe_download_and_extract
-from tensorlayer.files import assign_params
+from my_tensorlayer.files import maybe_download_and_extract
+from my_tensorlayer.files import assign_params
 
 __all__ = [
     'VGG16',
@@ -161,7 +161,7 @@ class VGG16(VGG16Base):
 
     Examples
     ---------
-    Classify ImageNet classes with VGG16, see `tutorial_models_vgg16.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_models_vgg16.py>`__
+    Classify ImageNet classes with VGG16, see `tutorial_models_vgg16.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_models_vgg16.py>`__
 
     >>> x = tf.placeholder(tf.float32, [None, 224, 224, 3])
     >>> # get the whole model

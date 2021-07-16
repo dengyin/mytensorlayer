@@ -3,9 +3,9 @@
 
 import tensorflow as tf
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import Layer
 
 __all__ = [
     'MultiplexerLayer',
@@ -32,7 +32,7 @@ class MultiplexerLayer(Layer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, shape=(None, 784), name='x')
     >>> # define the network
     >>> net_in = tl.layers.InputLayer(x, name='input')

@@ -3,11 +3,11 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import Layer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'StackLayer',
@@ -31,7 +31,7 @@ class StackLayer(Layer):
     Examples
     ---------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, shape=[None, 30])
     >>> net = tl.layers.InputLayer(x, name='input')
     >>> net1 = tl.layers.DenseLayer(net, 10, name='dense1')

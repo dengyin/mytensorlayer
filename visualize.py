@@ -7,8 +7,8 @@ import imageio
 
 import numpy as np
 
-import tensorlayer as tl
-from tensorlayer.lazy_imports import LazyImport
+import my_tensorlayer as tl
+from my_tensorlayer.lazy_imports import LazyImport
 cv2 = LazyImport("cv2")
 
 # Uncomment the following line if you got: _tkinter.TclError: no display name and no $DISPLAY environment variable
@@ -114,7 +114,7 @@ def save_images(images, size, image_path='_temp.png'):
     Examples
     ---------
     >>> import numpy as np
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> images = np.random.rand(64, 100, 100, 3)
     >>> tl.visualize.save_images(images, [8, 8], 'temp.png')
 
@@ -255,7 +255,7 @@ def draw_mpii_pose_to_image(image, poses, save_name='image.png'):
     Examples
     --------
     >>> import pprint
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> img_train_list, ann_train_list, img_test_list, ann_test_list = tl.files.load_mpii_pose_dataset()
     >>> image = tl.vis.read_image(img_train_list[0])
     >>> tl.vis.draw_mpii_pose_to_image(image, ann_train_list[0], 'image.png')

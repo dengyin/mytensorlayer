@@ -3,9 +3,9 @@
 
 import os
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.files.utils import maybe_download_and_extract
+from my_tensorlayer.files.utils import maybe_download_and_extract
 
 __all__ = ['load_nietzsche_dataset']
 

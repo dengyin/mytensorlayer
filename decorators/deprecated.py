@@ -5,9 +5,9 @@ import inspect
 import sys
 import functools
 
-from tensorlayer.decorators.utils import add_deprecation_notice_to_docstring
-from tensorlayer.decorators.utils import get_qualified_name
-from tensorlayer.decorators.utils import validate_deprecation_args
+from my_tensorlayer.decorators.utils import add_deprecation_notice_to_docstring
+from my_tensorlayer.decorators.utils import get_qualified_name
+from my_tensorlayer.decorators.utils import validate_deprecation_args
 
 import wrapt
 
@@ -38,7 +38,7 @@ def deprecated(wrapped=None, date='', instructions='', warn_once=True):
                 if warn_once:
                     _PRINTED_WARNING[class_or_func_name] = True
 
-                from tensorlayer import logging
+                from my_tensorlayer import logging
 
                 logging.warning(
                     '%s: `%s.%s` (in file: %s) is deprecated and will be removed %s.\n'

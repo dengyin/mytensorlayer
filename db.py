@@ -10,11 +10,11 @@ from datetime import datetime
 import gridfs
 import pymongo
 
-# from tensorlayer.files import load_graph_and_params
-from tensorlayer.files import exists_or_mkdir
-from tensorlayer.files import del_folder
+# from my_tensorlayer.files import load_graph_and_params
+from my_tensorlayer.files import exists_or_mkdir
+from my_tensorlayer.files import del_folder
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
 import tensorflow as tf
 import numpy as np
@@ -115,8 +115,8 @@ class TensorHub(object):
 
         Parameters
         ----------
-        network : TensorLayer layer
-            TensorLayer layer instance.
+        network : my_tensorlayer layer
+            my_tensorlayer layer instance.
         model_name : str
             The name/key of model.
         kwargs : other events
@@ -188,7 +188,7 @@ class TensorHub(object):
 
         Returns
         ---------
-        network : TensorLayer layer
+        network : my_tensorlayer layer
             Note that, the returned network contains all information of the document (record), e.g. if you saved accuracy in the document, you can get the accuracy by using ``net._accuracy``.
         """
         # print(kwargs)   # {}

@@ -5,10 +5,10 @@ import tensorflow as tf
 
 from tensorflow.python.ops.rnn_cell import LSTMStateTuple
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'cabs',
@@ -39,7 +39,7 @@ def cabs(x):
     return tf.minimum(1.0, tf.abs(x), name='cabs')
 
 
-@deprecated(date="2018-06-30", instructions="TensorLayer relies on TensorFlow to check naming")
+@deprecated(date="2018-06-30", instructions="my_tensorlayer relies on TensorFlow to check naming")
 def clear_layers_name():
     logging.warning('this method is DEPRECATED and has no effect, please remove it from your code.')
 
@@ -81,7 +81,7 @@ def flatten_reshape(variable, name='flatten'):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, [None, 128, 128, 3])
     >>> # Convolution Layer with 32 filters and a kernel size of 5
     >>> network = tf.layers.conv2d(x, 32, 5, activation=tf.nn.relu)
@@ -128,7 +128,7 @@ def get_layers_with_name(net, name="", verbose=False):
 
     Examples
     ---------
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> layers = tl.layers.get_layers_with_name(net, "CNN", True)
 
     """
@@ -169,7 +169,7 @@ def get_variables_with_name(name=None, train_only=True, verbose=False):
 
     Examples
     --------
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> dense_vars = tl.layers.get_variables_with_name('dense', True, True)
 
     """
@@ -284,14 +284,14 @@ def merge_networks(layers=None):
 
     Examples
     ---------
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> n1 = ...
     >>> n2 = ...
     >>> n1 = tl.layers.merge_networks([n1, n2])
 
     """
     if layers is None:
-        raise Exception("layers should be a list of TensorLayer's Layers.")
+        raise Exception("layers should be a list of my_tensorlayer's Layers.")
     layer = layers[0]
 
     all_params = []
@@ -375,7 +375,7 @@ def quantize_weight_overflow(x, bitW):
     return _quantize_overflow(x, bitW)
 
 
-@deprecated(date="2018-06-30", instructions="TensorLayer relies on TensorFlow to check name reusing")
+@deprecated(date="2018-06-30", instructions="my_tensorlayer relies on TensorFlow to check name reusing")
 def set_name_reuse(enable=True):
     logging.warning('this method is DEPRECATED and has no effect, please remove it from your code.')
 

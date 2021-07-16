@@ -3,16 +3,16 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
 from tensorflow.python.training import moving_averages
 
-from tensorlayer.layers.utils import quantize_active_overflow
-from tensorlayer.layers.utils import quantize_weight_overflow
+from my_tensorlayer.layers.utils import quantize_active_overflow
+from my_tensorlayer.layers.utils import quantize_weight_overflow
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'QuanDenseLayerWithBN',

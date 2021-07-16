@@ -5,11 +5,11 @@ import os
 
 import zipfile
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.files.utils import download_file_from_google_drive
-from tensorlayer.files.utils import exists_or_mkdir
-from tensorlayer.files.utils import load_file_list
+from my_tensorlayer.files.utils import download_file_from_google_drive
+from my_tensorlayer.files.utils import exists_or_mkdir
+from my_tensorlayer.files.utils import load_file_list
 
 __all__ = ['load_celebA_dataset']
 

@@ -6,14 +6,14 @@ from tensorflow.python.training import moving_averages
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import math_ops
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
-from tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
-from tensorlayer.layers.utils import get_collection_trainable
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
+from my_tensorlayer.layers.utils import get_collection_trainable
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'LocalResponseNormLayer',
@@ -112,7 +112,7 @@ def batch_normalization(x, mean, variance, offset, scale, variance_epsilon, data
         # Return a * x + b with customized data_format.
         # Currently TF doesn't have bias_scale, and tensorRT has bug in converting tf.nn.bias_add
         # So we reimplemted them to allow make the model work with tensorRT.
-        # See https://github.com/tensorlayer/openpose-plus/issues/75 for more details.
+        # See https://github.com/my_tensorlayer/openpose-plus/issues/75 for more details.
         df = {'channels_first': 'NCHW', 'channels_last': 'NHWC'}
         return _bias_add(_bias_scale(x, a, df[data_format]), b, df[data_format])
 

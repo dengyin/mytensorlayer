@@ -8,9 +8,9 @@ import math
 import tensorflow as tf
 from tensorflow.python.training import session_run_hook
 
-from tensorlayer import logging
-from tensorlayer.decorators import deprecated
-from tensorlayer.lazy_imports import LazyImport
+from my_tensorlayer import logging
+from my_tensorlayer.decorators import deprecated
+from my_tensorlayer.lazy_imports import LazyImport
 
 hvd = LazyImport('horovod.tensorflow')
 
@@ -20,12 +20,12 @@ __all__ = ['TaskSpecDef', 'TaskSpec', 'DistributedSession', 'StopAtTimeHook', 'L
 class Trainer(object):
     """Trainer for neural networks in a distributed environment.
 
-    TensorLayer Trainer is a high-level training interface built on top of TensorFlow MonitoredSession and
-    `Horovod <https://github.com/uber/horovod>`__. It transparently scales the training of a TensorLayer model
+    my_tensorlayer Trainer is a high-level training interface built on top of TensorFlow MonitoredSession and
+    `Horovod <https://github.com/uber/horovod>`__. It transparently scales the training of a my_tensorlayer model
     from a single GPU to multiple GPUs that be placed on different machines in a single cluster.
 
     To run the trainer, you will need to install Horovod on your machine. Check the installation script at
-    `tensorlayer/scripts/download_and_install_openmpi3_ubuntu.sh`
+    `my_tensorlayer/scripts/download_and_install_openmpi3_ubuntu.sh`
 
     The minimal inputs to the Trainer include (1) a training dataset defined using the TensorFlow DataSet API,
     and (2) a model build function given the inputs of the training dataset, and returns the neural network
@@ -78,7 +78,7 @@ class Trainer(object):
 
     Attributes
     ----------
-    training_network : class TensorLayer ``Layer``
+    training_network : class my_tensorlayer ``Layer``
         The training model.
     session : class TensorFlow ``MonitoredTrainingSession``
         The training session tha the Trainer wraps.
@@ -90,7 +90,7 @@ class Trainer(object):
     Examples
     --------
     See `tutorial_mnist_distributed_trainer.py
-    <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mnist_distributed_trainer.py>`__.
+    <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mnist_distributed_trainer.py>`__.
 
     """
 
@@ -228,7 +228,7 @@ class Trainer(object):
                 logging.info(log_str)
 
 
-@deprecated(date="2018-10-30", instructions="Using the TensorLayer distributed trainer.")
+@deprecated(date="2018-10-30", instructions="Using the my_tensorlayer distributed trainer.")
 class TaskSpecDef(object):
     """Specification for a distributed task.
 
@@ -364,7 +364,7 @@ class TaskSpecDef(object):
         )
 
 
-@deprecated(date="2018-10-30", instructions="Using the TensorLayer distributed trainer.")
+@deprecated(date="2018-10-30", instructions="Using the my_tensorlayer distributed trainer.")
 def create_task_spec_def():
     """Returns the a :class:`TaskSpecDef` based on the environment variables for distributed training.
 
@@ -394,7 +394,7 @@ def create_task_spec_def():
         raise Exception('You need to setup TF_CONFIG or JOB_NAME to define the task.')
 
 
-@deprecated(date="2018-10-30", instructions="Using the TensorLayer distributed trainer.")
+@deprecated(date="2018-10-30", instructions="Using the my_tensorlayer distributed trainer.")
 def create_distributed_session(
         task_spec=None, checkpoint_dir=None, scaffold=None, hooks=None, chief_only_hooks=None, save_checkpoint_secs=600,
         save_summaries_steps=object(), save_summaries_secs=object(), config=None, stop_grace_period_secs=120,
@@ -491,7 +491,7 @@ def create_distributed_session(
     )
 
 
-@deprecated(date="2018-10-30", instructions="Using the TensorLayer distributed trainer.")
+@deprecated(date="2018-10-30", instructions="Using the my_tensorlayer distributed trainer.")
 class StopAtTimeHook(session_run_hook.SessionRunHook):
     """Hook that requests stop after a specified time.
 
@@ -514,7 +514,7 @@ class StopAtTimeHook(session_run_hook.SessionRunHook):
             run_context.request_stop()
 
 
-@deprecated(date="2018-10-30", instructions="Using the TensorLayer distributed trainer.")
+@deprecated(date="2018-10-30", instructions="Using the my_tensorlayer distributed trainer.")
 class LoadCheckpoint(session_run_hook.SessionRunHook):
     """Hook that loads a checkpoint after the session is created.
 

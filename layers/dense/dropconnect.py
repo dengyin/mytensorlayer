@@ -3,12 +3,12 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'DropconnectDenseLayer',

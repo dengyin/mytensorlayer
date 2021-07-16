@@ -3,12 +3,12 @@
 
 import os
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.files.utils import del_file
-from tensorlayer.files.utils import folder_exists
-from tensorlayer.files.utils import load_file_list
-from tensorlayer.files.utils import maybe_download_and_extract
+from my_tensorlayer.files.utils import del_file
+from my_tensorlayer.files.utils import folder_exists
+from my_tensorlayer.files.utils import load_file_list
+from my_tensorlayer.files.utils import maybe_download_and_extract
 
 __all__ = ['load_mpii_pose_dataset']
 
@@ -37,7 +37,7 @@ def load_mpii_pose_dataset(path='data', is_16_pos_only=False):
     Examples
     --------
     >>> import pprint
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> img_train_list, ann_train_list, img_test_list, ann_test_list = tl.files.load_mpii_pose_dataset()
     >>> image = tl.vis.read_image(img_train_list[0])
     >>> tl.vis.draw_mpii_pose_to_image(image, ann_train_list[0], 'image.png')

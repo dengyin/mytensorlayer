@@ -4,7 +4,7 @@
 import numpy as np
 import tensorflow as tf
 
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import LayersConfig
 
 __all__ = ['deconv2d_bilinear_upsampling_initializer']
 
@@ -30,7 +30,7 @@ def deconv2d_bilinear_upsampling_initializer(shape):
     --------
     - Upsampling by a factor of 2, ie e.g 100->200
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> rescale_factor = 2
     >>> imsize = 128
     >>> num_channels = 3

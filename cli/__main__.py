@@ -3,7 +3,7 @@
 
 import argparse
 
-from tensorlayer.cli import train
+from my_tensorlayer.cli import train
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='tl')

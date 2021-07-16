@@ -20,7 +20,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import f1_score
 
 import tensorflow as tf
-import tensorlayer as tl
+import my_tensorlayer as tl
 
 __all__ = [
     'fit',
@@ -46,14 +46,14 @@ def fit(
 ):
     """Training a given non time-series network by the given cost function, training data, batch_size, n_epoch etc.
 
-    - MNIST example click `here <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_.
-    - In order to control the training details, the authors HIGHLY recommend ``tl.iterate`` see two MNIST examples `1 <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mlp_dropout1.py>`_, `2 <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mlp_dropout1.py>`_.
+    - MNIST example click `here <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_.
+    - In order to control the training details, the authors HIGHLY recommend ``tl.iterate`` see two MNIST examples `1 <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mlp_dropout1.py>`_, `2 <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mlp_dropout1.py>`_.
 
     Parameters
     ----------
     sess : Session
         TensorFlow Session.
-    network : TensorLayer layer
+    network : my_tensorlayer layer
         the network to be trained.
     train_op : TensorFlow optimizer
         The optimizer for training e.g. tf.train.AdamOptimizer.
@@ -93,7 +93,7 @@ def fit(
 
     Examples
     --------
-    See `tutorial_mnist_simple.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_
+    See `tutorial_mnist_simple.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_
 
     >>> tl.utils.fit(sess, network, train_op, cost, X_train, y_train, x, y_,
     ...            acc=acc, batch_size=500, n_epoch=200, print_freq=5,
@@ -227,7 +227,7 @@ def test(sess, network, acc, X_test, y_test, x, y_, batch_size, cost=None):
     ----------
     sess : Session
         TensorFlow session.
-    network : TensorLayer layer
+    network : my_tensorlayer layer
         The network.
     acc : TensorFlow expression or None
         Metric for accuracy or others.
@@ -248,7 +248,7 @@ def test(sess, network, acc, X_test, y_test, x, y_, batch_size, cost=None):
 
     Examples
     --------
-    See `tutorial_mnist_simple.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_
+    See `tutorial_mnist_simple.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_
 
     >>> tl.utils.test(sess, network, acc, X_test, y_test, x, y_, batch_size=None, cost=cost)
 
@@ -294,7 +294,7 @@ def predict(sess, network, X, x, y_op, batch_size=None):
     ----------
     sess : Session
         TensorFlow Session.
-    network : TensorLayer layer
+    network : my_tensorlayer layer
         The network.
     X : numpy.array
         The inputs.
@@ -308,7 +308,7 @@ def predict(sess, network, X, x, y_op, batch_size=None):
 
     Examples
     --------
-    See `tutorial_mnist_simple.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_
+    See `tutorial_mnist_simple.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mnist_simple.py>`_
 
     >>> y = network.outputs
     >>> y_op = tf.argmax(tf.nn.softmax(y), 1)

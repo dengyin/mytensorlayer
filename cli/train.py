@@ -6,8 +6,8 @@ tl train
 
 (Alpha release - usage might change later)
 
-The tensorlayer.cli.train module provides the ``tl train`` subcommand.
-It helps the user bootstrap a TensorFlow/TensorLayer program for distributed training
+The my_tensorlayer.cli.train module provides the ``tl train`` subcommand.
+It helps the user bootstrap a TensorFlow/my_tensorlayer program for distributed training
 using multiple GPU cards or CPUs on a computer.
 
 You need to first setup the `CUDA_VISIBLE_DEVICES <http://acceleware.com/blog/cudavisibledevices-masking-gpus>`_

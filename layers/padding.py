@@ -3,11 +3,11 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import Layer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'PadLayer',
@@ -35,7 +35,7 @@ class PadLayer(Layer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> images = tf.placeholder(tf.float32, [None, 224, 224, 3])
     >>> net = tl.layers.InputLayer(images, name='in')
     >>> net = tl.layers.PadLayer(net, [[0, 0], [3, 3], [3, 3], [0, 0]], "REFLECT", name='inpad')

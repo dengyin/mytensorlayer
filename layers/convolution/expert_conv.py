@@ -3,12 +3,12 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'Conv1dLayer',
@@ -143,7 +143,7 @@ class Conv2dLayer(Layer):
 
     Examples
     --------
-    With TensorLayer
+    With my_tensorlayer
 
     >>> x = tf.placeholder(tf.float32, shape=(None, 28, 28, 1))
     >>> net = tl.layers.InputLayer(x, name='input_layer')
@@ -162,7 +162,7 @@ class Conv2dLayer(Layer):
     ...                   pool = tf.nn.max_pool,
     ...                   name ='pool_layer1',)   # output: (?, 14, 14, 32)
 
-    Without TensorLayer, you can implement 2D convolution as follow.
+    Without my_tensorlayer, you can implement 2D convolution as follow.
 
     >>> W = tf.Variable(W_init(shape=[5, 5, 1, 32], ), name='W_conv')
     >>> b = tf.Variable(b_init(shape=[32], ), name='b_conv')

@@ -3,10 +3,10 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
 __all__ = [
     'InputLayer',
@@ -65,7 +65,7 @@ class OneHotInputLayer(Layer):
     Examples
     ---------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.int32, shape=[None])
     >>> net = tl.layers.OneHotInputLayer(x, depth=8, name='one_hot_encoding')
     (?, 8)
@@ -132,10 +132,10 @@ class Word2vecEmbeddingInputlayer(Layer):
 
     Examples
     --------
-    With TensorLayer : see ``tensorlayer/example/tutorial_word2vec_basic.py``
+    With my_tensorlayer : see ``my_tensorlayer/example/tutorial_word2vec_basic.py``
 
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> batch_size = 8
     >>> train_inputs = tf.placeholder(tf.int32, shape=(batch_size))
     >>> train_labels = tf.placeholder(tf.int32, shape=(batch_size, 1))
@@ -150,7 +150,7 @@ class Word2vecEmbeddingInputlayer(Layer):
     >>> train_op = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost, var_list=train_params)
     >>> normalized_embeddings = net.normalized_embeddings
 
-    Without TensorLayer : see ``tensorflow/examples/tutorials/word2vec/word2vec_basic.py``
+    Without my_tensorlayer : see ``tensorflow/examples/tutorials/word2vec/word2vec_basic.py``
 
     >>> train_inputs = tf.placeholder(tf.int32, shape=(batch_size))
     >>> train_labels = tf.placeholder(tf.int32, shape=(batch_size, 1))
@@ -269,7 +269,7 @@ class EmbeddingInputlayer(Layer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> batch_size = 8
     >>> x = tf.placeholder(tf.int32, shape=(batch_size, ))
     >>> net = tl.layers.EmbeddingInputlayer(inputs=x, vocabulary_size=1000, embedding_size=50, name='embed')
@@ -334,7 +334,7 @@ class AverageEmbeddingInputlayer(Layer):
     Examples
     ---------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> batch_size = 8
     >>> length = 5
     >>> x = tf.placeholder(tf.int32, shape=(batch_size, length))

@@ -3,9 +3,9 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import Layer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
 __all__ = [
     'ConcatLayer',
@@ -28,7 +28,7 @@ class ConcatLayer(Layer):
     Examples
     ----------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> sess = tf.InteractiveSession()
     >>> x = tf.placeholder(tf.float32, shape=[None, 784])
     >>> inputs = tl.layers.InputLayer(x, name='input_layer')
@@ -88,7 +88,7 @@ class ElementwiseLayer(Layer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, shape=[None, 784])
     >>> inputs = tl.layers.InputLayer(x, name='input_layer')
     >>> net_0 = tl.layers.DenseLayer(inputs, n_units=500, act=tf.nn.relu, name='net_0')

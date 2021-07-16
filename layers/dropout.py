@@ -3,12 +3,12 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'DropoutLayer',
@@ -39,10 +39,10 @@ class DropoutLayer(Layer):
 
     Examples
     --------
-    Method 1: Using ``all_drop`` see `tutorial_mlp_dropout1.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mlp_dropout1.py>`__
+    Method 1: Using ``all_drop`` see `tutorial_mlp_dropout1.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mlp_dropout1.py>`__
 
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> net = tl.layers.InputLayer(x, name='input_layer')
     >>> net = tl.layers.DropoutLayer(net, keep=0.8, name='drop1')
     >>> net = tl.layers.DenseLayer(net, n_units=800, act=tf.nn.relu, name='relu1')
@@ -59,7 +59,7 @@ class DropoutLayer(Layer):
     >>> err, ac = sess.run([cost, acc], feed_dict=feed_dict)
     >>> ...
 
-    Method 2: Without using ``all_drop`` see `tutorial_mlp_dropout2.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_mlp_dropout2.py>`__
+    Method 2: Without using ``all_drop`` see `tutorial_mlp_dropout2.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_mlp_dropout2.py>`__
 
     >>> def mlp(x, is_train=True, reuse=False):
     >>>     with tf.variable_scope("MLP", reuse=reuse):

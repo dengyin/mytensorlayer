@@ -28,16 +28,16 @@ import os
 import numpy as np
 import tensorflow as tf
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.layers import Conv2d
-from tensorlayer.layers import DenseLayer
-from tensorlayer.layers import FlattenLayer
-from tensorlayer.layers import InputLayer
-from tensorlayer.layers import MaxPool2d
+from my_tensorlayer.layers import Conv2d
+from my_tensorlayer.layers import DenseLayer
+from my_tensorlayer.layers import FlattenLayer
+from my_tensorlayer.layers import InputLayer
+from my_tensorlayer.layers import MaxPool2d
 
-from tensorlayer.files import maybe_download_and_extract
-from tensorlayer.files import assign_params
+from my_tensorlayer.files import maybe_download_and_extract
+from my_tensorlayer.files import assign_params
 
 __all__ = [
     'VGG19',
@@ -171,7 +171,7 @@ class VGG19Base(object):
         logging.info("Restore pre-trained parameters")
         maybe_download_and_extract(
             'vgg19.npy', 'models',
-            'https://media.githubusercontent.com/media/tensorlayer/pretrained-models/master/models/',
+            'https://media.githubusercontent.com/media/my_tensorlayer/pretrained-models/master/models/',
             expected_bytes=574670860
         )
         vgg19_npy_path = os.path.join('models', 'vgg19.npy')
@@ -205,7 +205,7 @@ class VGG19(VGG19Base):
 
     Examples
     ---------
-    Classify ImageNet classes with VGG19, see `tutorial_models_vgg19.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_models_vgg19.py>`__
+    Classify ImageNet classes with VGG19, see `tutorial_models_vgg19.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_models_vgg19.py>`__
 
     >>> x = tf.placeholder(tf.float32, [None, 224, 224, 3])
     >>> # get the whole model

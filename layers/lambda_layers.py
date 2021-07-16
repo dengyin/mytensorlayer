@@ -3,12 +3,12 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'LambdaLayer',
@@ -35,15 +35,15 @@ class LambdaLayer(Layer):
     Non-parametric case
 
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, shape=[None, 1], name='x')
     >>> net = tl.layers.InputLayer(x, name='input')
     >>> net = tl.layers.LambdaLayer(net, lambda x: 2*x, name='lambda')
 
-    Parametric case, merge other wrappers into TensorLayer
+    Parametric case, merge other wrappers into my_tensorlayer
 
     >>> from keras.layers import *
-    >>> from tensorlayer.layers import *
+    >>> from my_tensorlayer.layers import *
     >>> def keras_block(x):
     >>>     x = Dropout(0.8)(x)
     >>>     x = Dense(800, activation='relu')(x)
@@ -102,7 +102,7 @@ class ElementwiseLambdaLayer(Layer):
     z = mean + noise * tf.exp(std * 0.5)
 
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
 
     >>> def func(noise, mean, std):
     >>>     return mean + noise * tf.exp(std * 0.5)

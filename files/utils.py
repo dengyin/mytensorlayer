@@ -42,11 +42,11 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.python.platform import gfile
 
-import tensorlayer as tl
-from tensorlayer import logging
-from tensorlayer import nlp
-from tensorlayer import utils
-from tensorlayer import visualize
+import my_tensorlayer as tl
+from my_tensorlayer import logging
+from my_tensorlayer import nlp
+from my_tensorlayer import utils
+from my_tensorlayer import visualize
 
 __all__ = [
     'assign_params',
@@ -1343,7 +1343,7 @@ def load_mpii_pose_dataset(path='data', is_16_pos_only=False):
     Examples
     --------
     >>> import pprint
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> img_train_list, ann_train_list, img_test_list, ann_test_list = tl.files.load_mpii_pose_dataset()
     >>> image = tl.vis.read_image(img_train_list[0])
     >>> tl.vis.draw_mpii_pose_to_image(image, ann_train_list[0], 'image.png')
@@ -1646,7 +1646,7 @@ def load_npz(path='', name='model.npz'):
 
 
 def assign_params(sess, params, network):
-    """Assign the given parameters to the TensorLayer network.
+    """Assign the given parameters to the my_tensorlayer network.
 
     Parameters
     ----------
@@ -1901,7 +1901,7 @@ def save_graph(network=None, name='graph.pkl'):
 
     Parameters
     -----------
-    network : TensorLayer layer
+    network : my_tensorlayer layer
         The network to save.
     name : str
         The name of graph file.
@@ -2007,7 +2007,7 @@ def load_graph(name='model.pkl'):
 
     Returns
     --------
-    network : TensorLayer layer
+    network : my_tensorlayer layer
         The input placeholder will become the attributes of the returned TL layer object.
 
     Examples
@@ -2025,7 +2025,7 @@ def save_graph_and_params(network=None, name='model', sess=None):
 
     Parameters
     -----------
-    network : TensorLayer layer
+    network : my_tensorlayer layer
         The network to save.
     name : str
         The folder name to save the graph and parameters.

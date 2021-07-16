@@ -17,7 +17,7 @@ import threading
 
 import six
 
-from tensorlayer.decorators import deprecated
+from my_tensorlayer.decorators import deprecated
 
 __all__ = [
     'DEBUG',
@@ -62,7 +62,7 @@ def _get_logger():
             return _logger
 
         # Scope the TensorFlow logger to not conflict with users' loggers.
-        logger = _logging.getLogger('tensorlayer')
+        logger = _logging.getLogger('my_tensorlayer')
 
         # Don't further configure the TensorFlow logger if the root logger is
         # already configured. This prevents double logging in those cases.

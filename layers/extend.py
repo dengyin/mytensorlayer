@@ -3,11 +3,11 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import Layer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'ExpandDimsLayer',
@@ -32,7 +32,7 @@ class ExpandDimsLayer(Layer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, (None, 100))
     >>> n = tl.layers.InputLayer(x, name='in')
     >>> n = tl.layers.ExpandDimsLayer(n, 2)
@@ -75,7 +75,7 @@ class TileLayer(Layer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, (None, 100))
     >>> n = tl.layers.InputLayer(x, name='in')
     >>> n = tl.layers.ExpandDimsLayer(n, 2)

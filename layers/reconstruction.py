@@ -4,18 +4,18 @@ import time
 
 import tensorflow as tf
 
-from tensorlayer import files
-from tensorlayer import iterate
-from tensorlayer import utils
-from tensorlayer import visualize
+from my_tensorlayer import files
+from my_tensorlayer import iterate
+from my_tensorlayer import utils
+from my_tensorlayer import visualize
 
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import LayersConfig
 
-from tensorlayer.layers.dense import DenseLayer
+from my_tensorlayer.layers.dense import DenseLayer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'ReconLayer',
@@ -45,7 +45,7 @@ class ReconLayer(DenseLayer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, shape=(None, 784))
     >>> net = tl.layers.InputLayer(x, name='input')
     >>> net = tl.layers.DenseLayer(net, n_units=196, act=tf.nn.sigmoid, name='dense')

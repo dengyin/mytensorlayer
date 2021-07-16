@@ -3,14 +3,14 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
 
-from tensorlayer.layers.inputs import InputLayer
+from my_tensorlayer.layers.inputs import InputLayer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'TimeDistributedLayer',
@@ -37,7 +37,7 @@ class TimeDistributedLayer(Layer):
     Examples
     --------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> batch_size = 32
     >>> timestep = 20
     >>> input_dim = 100

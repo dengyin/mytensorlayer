@@ -10,13 +10,13 @@ import numpy as np
 
 import tensorflow as tf
 
-from tensorlayer.layers.utils import list_remove_repeat
+from my_tensorlayer.layers.utils import list_remove_repeat
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
-from tensorlayer.decorators import protected_method
-from tensorlayer.decorators import private_method
+from my_tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import protected_method
+from my_tensorlayer.decorators import private_method
 
 __all__ = [
     'LayersConfig',
@@ -72,7 +72,7 @@ class Layer(object):
     - Define model
 
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder("float32", [None, 100])
     >>> n = tl.layers.InputLayer(x, name='in')
     >>> n = tl.layers.DenseLayer(n, 80, name='d1')

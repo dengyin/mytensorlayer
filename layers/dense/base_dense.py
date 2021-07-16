@@ -3,12 +3,12 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'DenseLayer',
@@ -39,12 +39,12 @@ class DenseLayer(Layer):
 
     Examples
     --------
-    With TensorLayer
+    With my_tensorlayer
 
     >>> net = tl.layers.InputLayer(x, name='input')
     >>> net = tl.layers.DenseLayer(net, 800, act=tf.nn.relu, name='relu')
 
-    Without native TensorLayer APIs, you can do as follow.
+    Without native my_tensorlayer APIs, you can do as follow.
 
     >>> W = tf.Variable(
     ...     tf.random_uniform([n_in, n_units], -1.0, 1.0), name='W')

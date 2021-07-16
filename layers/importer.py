@@ -3,13 +3,13 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'SlimNetsLayer',
@@ -19,10 +19,10 @@ __all__ = [
 
 
 class SlimNetsLayer(Layer):
-    """A layer that merges TF-Slim models into TensorLayer.
+    """A layer that merges TF-Slim models into my_tensorlayer.
 
     Models can be found in `slim-model <https://github.com/tensorflow/models/tree/master/research/slim#pre-trained-models>`__,
-    see Inception V3 example on `Github <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_inceptionV3_tfslim.py>`__.
+    see Inception V3 example on `Github <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_inceptionV3_tfslim.py>`__.
 
     Parameters
     ----------
@@ -85,9 +85,9 @@ class SlimNetsLayer(Layer):
     date="2018-06-30", instructions="This layer will be deprecated soon as :class:`LambdaLayer` can do the same thing"
 )
 class KerasLayer(Layer):
-    """A layer to import Keras layers into TensorLayer.
+    """A layer to import Keras layers into my_tensorlayer.
 
-    Example can be found here `tutorial_keras.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_keras.py>`__.
+    Example can be found here `tutorial_keras.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_keras.py>`__.
 
     Parameters
     ----------
@@ -131,7 +131,7 @@ class KerasLayer(Layer):
 class EstimatorLayer(Layer):
     """A layer that accepts a user-defined model.
 
-    It is similar with :class:`KerasLayer`, see `tutorial_keras.py <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_keras.py>`__.
+    It is similar with :class:`KerasLayer`, see `tutorial_keras.py <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_keras.py>`__.
 
     Parameters
     ----------

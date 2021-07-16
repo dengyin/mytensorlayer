@@ -8,13 +8,13 @@ from tensorflow.python.util.tf_inspect import getfullargspec
 from tensorflow.contrib.rnn import stack_bidirectional_dynamic_rnn
 from tensorflow.python.ops.rnn_cell import LSTMStateTuple
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
-from tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'RNNLayer',
@@ -88,12 +88,12 @@ class RNNLayer(Layer):
 
     Examples
     --------
-    - For synced sequence input and output, see `PTB example <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_ptb_lstm_state_is_tuple.py>`__
+    - For synced sequence input and output, see `PTB example <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_ptb_lstm_state_is_tuple.py>`__
 
     - For encoding see below.
 
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> batch_size = 32
     >>> num_steps = 5
     >>> vocab_size = 3000
@@ -137,7 +137,7 @@ class RNNLayer(Layer):
     - `Neural Network RNN Cells in TensorFlow <https://www.tensorflow.org/api_docs/python/rnn_cell/>`__
     - `tensorflow/python/ops/rnn.py <https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/ops/rnn.py>`__
     - `tensorflow/python/ops/rnn_cell.py <https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/ops/rnn_cell.py>`__
-    - see TensorFlow tutorial ``ptb_word_lm.py``, TensorLayer tutorials ``tutorial_ptb_lstm*.py`` and ``tutorial_generate_text.py``
+    - see TensorFlow tutorial ``ptb_word_lm.py``, my_tensorlayer tutorials ``tutorial_ptb_lstm*.py`` and ``tutorial_generate_text.py``
 
     """
 
@@ -810,7 +810,7 @@ def advanced_indexing_op(inputs, index):
     ---------
     >>> import numpy as np
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> batch_size, max_length, n_features = 3, 5, 2
     >>> z = np.random.uniform(low=-1, high=1, size=[batch_size, max_length, n_features]).astype(np.float32)
     >>> b_z = tf.constant(z)
@@ -1469,7 +1469,7 @@ class Seq2Seq(Layer):
     See `Model <https://camo.githubusercontent.com/9e88497fcdec5a9c716e0de5bc4b6d1793c6e23f/687474703a2f2f73757269796164656570616e2e6769746875622e696f2f696d672f736571327365712f73657132736571322e706e67>`__
     and `Sequence to Sequence Learning with Neural Networks <https://arxiv.org/abs/1409.3215>`__.
 
-    - Please check this example `Chatbot in 200 lines of code <https://github.com/tensorlayer/seq2seq-chatbot>`__.
+    - Please check this example `Chatbot in 200 lines of code <https://github.com/my_tensorlayer/seq2seq-chatbot>`__.
     - The Author recommends users to read the source code of :class:`DynamicRNNLayer` and :class:`Seq2Seq`.
 
     Parameters
@@ -1532,7 +1532,7 @@ class Seq2Seq(Layer):
 
     Examples
     ----------
-    >>> from tensorlayer.layers import *
+    >>> from my_tensorlayer.layers import *
     >>> batch_size = 32
     >>> encode_seqs = tf.placeholder(dtype=tf.int64, shape=[batch_size, None], name="encode_seqs")
     >>> decode_seqs = tf.placeholder(dtype=tf.int64, shape=[batch_size, None], name="decode_seqs")

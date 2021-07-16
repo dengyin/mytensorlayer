@@ -3,15 +3,15 @@
 
 import tensorflow as tf
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
 
-from tensorlayer.layers.utils import compute_alpha
-from tensorlayer.layers.utils import ternary_operation
+from my_tensorlayer.layers.utils import compute_alpha
+from my_tensorlayer.layers.utils import ternary_operation
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = ['TernaryConv2d']
 
@@ -57,7 +57,7 @@ class TernaryConv2d(Layer):
     Examples
     ---------
     >>> import tensorflow as tf
-    >>> import tensorlayer as tl
+    >>> import my_tensorlayer as tl
     >>> x = tf.placeholder(tf.float32, [None, 256, 256, 3])
     >>> net = tl.layers.InputLayer(x, name='input')
     >>> net = tl.layers.TernaryConv2d(net, 32, (5, 5), (1, 1), padding='SAME', name='bcnn1')

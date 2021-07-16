@@ -18,8 +18,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.python.platform import gfile
 
-import tensorlayer as tl
-from tensorlayer.lazy_imports import LazyImport
+import my_tensorlayer as tl
+from my_tensorlayer.lazy_imports import LazyImport
 
 nltk = LazyImport("nltk")
 
@@ -52,7 +52,7 @@ __all__ = [
 def generate_skip_gram_batch(data, batch_size, num_skips, skip_window, data_index=0):
     """Generate a training batch for the Skip-Gram model.
 
-    See `Word2Vec example <https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_word2vec_basic.py>`__.
+    See `Word2Vec example <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/example/tutorial_word2vec_basic.py>`__.
 
     Parameters
     ----------

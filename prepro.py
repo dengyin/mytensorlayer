@@ -8,7 +8,7 @@ import time
 
 import numpy as np
 
-import tensorlayer as tl
+import my_tensorlayer as tl
 
 import scipy
 import scipy.ndimage as ndi
@@ -28,7 +28,7 @@ from skimage.morphology import binary_dilation as _binary_dilation
 from skimage.morphology import binary_erosion as _binary_erosion
 
 from six.moves import range
-from tensorlayer.lazy_imports import LazyImport
+from my_tensorlayer.lazy_imports import LazyImport
 import PIL
 cv2 = LazyImport("cv2")
 import math

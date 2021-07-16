@@ -8,15 +8,15 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.python.ops import array_ops
 
-from tensorlayer.layers.core import Layer
-from tensorlayer.layers.core import LayersConfig
-from tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
+from my_tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import LayersConfig
+from my_tensorlayer.layers.core import TF_GRAPHKEYS_VARIABLES
 
-from tensorlayer.layers.utils import flatten_reshape
+from my_tensorlayer.layers.utils import flatten_reshape
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
 __all__ = [
     'transformer',

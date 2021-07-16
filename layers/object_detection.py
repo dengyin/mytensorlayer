@@ -1,19 +1,19 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 
-from tensorlayer.layers.core import Layer
+from my_tensorlayer.layers.core import Layer
 
-from tensorlayer import logging
+from my_tensorlayer import logging
 
-from tensorlayer.decorators import deprecated_alias
+from my_tensorlayer.decorators import deprecated_alias
 
-from tensorlayer.lazy_imports import LazyImport
+from my_tensorlayer.lazy_imports import LazyImport
 
 try:
-    roi_pooling = LazyImport("tensorlayer.third_party.roi_pooling.roi_pooling.roi_pooling_ops")
+    roi_pooling = LazyImport("my_tensorlayer.third_party.roi_pooling.roi_pooling.roi_pooling_ops")
 except Exception as e:
     logging.error(e)
-    logging.error("HINT: 1. https://github.com/deepsense-ai/roi-pooling  2. tensorlayer/third_party/roi_pooling")
+    logging.error("HINT: 1. https://github.com/deepsense-ai/roi-pooling  2. my_tensorlayer/third_party/roi_pooling")
 
 __all__ = [
     'ROIPoolingLayer',
@@ -40,7 +40,7 @@ class ROIPoolingLayer(Layer):
     Notes
     -----------
     - This implementation is imported from `Deepsense-AI <https://github.com/deepsense-ai/roi-pooling>`__ .
-    - Please install it by the instruction `HERE <https://github.com/tensorlayer/tensorlayer/blob/master/tensorlayer/third_party/roi_pooling/README.md>`__.
+    - Please install it by the instruction `HERE <https://github.com/my_tensorlayer/my_tensorlayer/blob/master/my_tensorlayer/third_party/roi_pooling/README.md>`__.
 
     """
 
